@@ -6,16 +6,16 @@ services:
 before_install:
   - docker build -t babitabisht/angular_ci  -f Dockerfile.dev  .
 
-# deploy:
-#   provider: elasticbeanstalk
-#   region: "us-east-1"
-#   app: "Docker-angular"
-#   env: "DockerAngular-env"
-#   bucket_name: "elasticbeanstalk-us-east-1-844579967235"
-#   bucket_path: "Docker-angular"
-#   on:
-#     branch: master
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key:
-#     secure:  "$AWS_SECRET_KEY"
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "Docker-angular"
+  env: "DockerAngular-env"
+  bucket_name: "elasticbeanstalk-us-east-1-844579967235"
+  bucket_path: "Docker-angular"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure:  "$AWS_SECRET_KEY"
    

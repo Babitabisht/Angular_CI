@@ -1,0 +1,12 @@
+version: "2"  
+services: 
+  angular_web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports: 
+      - "4200:4200"
+    volumes: 
+      - /app/node_modules
+      - .:app
+      

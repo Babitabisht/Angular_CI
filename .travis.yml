@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t babitabisht/angular_ci -f Dockerfile.dev  .
+  - docker build -t babitabisht/angular_ci   Dockerfile  .
 
 # script:
 #     - 
